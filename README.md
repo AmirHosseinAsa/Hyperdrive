@@ -6,8 +6,6 @@ The player races against AI-controlled cars in a 3D environment, with the object
 
 ![](https://github.com/Abhijeet-Pitumbur/Hyperdrive/blob/main/project/gameplay.gif)
 
-### [Download Game](https://drive.google.com/u/1/uc?id=1iAgXWyOTI7m2_WqPV8r7pbHfkqi6jl_E&export=download&confirm=t)
-
 
 ## Features
 - AI-controlled opponents
