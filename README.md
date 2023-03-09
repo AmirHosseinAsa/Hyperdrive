@@ -6,8 +6,6 @@ The player races against AI-controlled cars in a 3D environment, with the object
 
 ![](https://github.com/Abhijeet-Pitumbur/Hyperdrive/blob/main/project/gameplay.gif)
 
-### [Download Game](https://drive.google.com/u/1/uc?id=1iAgXWyOTI7m2_WqPV8r7pbHfkqi6jl_E&export=download&confirm=t)
-
 
 ## Features
 - AI-controlled opponents
@@ -21,6 +19,5 @@ The player races against AI-controlled cars in a 3D environment, with the object
 
 ## Languages and Tools
 - C# 10.0
-- Unity 2020.3
+- Unity 2021.3
 - Blender 2.92
-- Visual Studio Code 1.55
