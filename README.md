@@ -8,10 +8,6 @@ The player races against AI-controlled cars in a 3D environment, with the object
 
 ### [Download Game](https://drive.google.com/u/1/uc?id=1iAgXWyOTI7m2_WqPV8r7pbHfkqi6jl_E&export=download&confirm=t)
 
-##### [Watch Gameplay](https://www.youtube.com/watch?v=ohXufchwxcI)  · YouTube
-##### [Play Game in Browser](https://abhp.itch.io/hyperdrive)  · Itch.<span>io</span>
-##### [View PDF Report](https://drive.google.com/file/d/1u7d6cInkePNkwr6vmKtC4N7WWQWllmz9/view)  · Google Drive
-##### [Download Repository](https://github.com/Abhijeet-Pitumbur/Hyperdrive/archive/refs/heads/main.zip)  · GitHub
 
 ## Features
 - AI-controlled opponents
