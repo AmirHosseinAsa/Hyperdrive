@@ -12,7 +12,7 @@ public class InputController : MonoBehaviour
     private void Update()
     {
         steerInput = Input.GetAxis(inputSteerAxis);
-        throttleInput = Input.GetAxis(inputThrottleAxis);
+        throttleInput =  Input.GetAxis(inputThrottleAxis);
     }
 
 }

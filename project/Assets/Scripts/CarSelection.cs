@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CarSelection : MonoBehaviour
 {
-
+    [SerializeField] GameObject previusButton;
     private GameObject carLockObject;
     private Image carLockImage;
     private WaitForSecondsRealtime tenthSecondDelay, quarterSecondDelay, twoFifthsSecondDelay;
 
     public void SelectCar()
     {
+        MultiplayerCarSelection.isMultiplayer = false;
+
         if (Menu.ins.gameType == Menu.GameTypes.play)
         {
             Menu.ins.playButtonCar.gameObject.SetActive(true);
@@ -31,6 +34,8 @@ public class CarSelection : MonoBehaviour
         }
         else if (Menu.ins.gameType == Menu.GameTypes.quickRace2P)
         {
+            MultiplayerCarSelection.isMultiplayer = true;
+
             Menu.ins.playButtonCar.gameObject.SetActive(false);
             Menu.ins.nextButtonCar.gameObject.SetActive(true);
             Menu.ins.backButtonCarPlay.gameObject.SetActive(false);
@@ -100,7 +105,7 @@ public class CarSelection : MonoBehaviour
         if (Menu.ins.totalNumCars > 1)
         { Menu.ins.nextCarButton.interactable = true; }
         else
-        { Menu.ins.nextCarButton.interactable = false; }
+        { Menu.ins.nextCarButton.interactable = false; SetPreviousButton(); }
         for (int i = 0; i <= 1; i++)
         { Menu.ins.carLockTexts[i] = string.Empty; }
         Menu.ins.carLockTexts[2] = "Get 3 stars in \n Level 3 to unlock";
@@ -119,7 +124,7 @@ public class CarSelection : MonoBehaviour
         Menu.ins.cars[Menu.ins.selectedCar].LeanMoveZ(Menu.ins.currentCarPosition, Menu.ins.halfSecond).setEaseInOutQuart().setIgnoreTimeScale(true);
         Menu.ins.previousCarButton.interactable = true;
         if (Menu.ins.selectedCar == Menu.ins.totalNumCars - 1)
-        { Menu.ins.nextCarButton.interactable = false; }
+        { Menu.ins.nextCarButton.interactable = false; SetPreviousButton(); }
         CheckCarLock();
         Menu.ins.carName.gameObject.LeanScaleX(0f, 0.1f).setEaseInOutQuart().setIgnoreTimeScale(true); ;
         yield return tenthSecondDelay;
@@ -138,7 +143,7 @@ public class CarSelection : MonoBehaviour
         Menu.ins.cars[Menu.ins.selectedCar].LeanMoveZ(Menu.ins.currentCarPosition, Menu.ins.halfSecond).setEaseInOutQuart().setIgnoreTimeScale(true);
         Menu.ins.nextCarButton.interactable = true;
         if (Menu.ins.selectedCar == 0)
-        { Menu.ins.previousCarButton.interactable = false; }
+        { Menu.ins.previousCarButton.interactable = false; SetPreviousButton(); }
         CheckCarLock();
         Menu.ins.carName.gameObject.LeanScaleX(0f, 0.1f).setEaseInOutQuart().setIgnoreTimeScale(true); ;
         yield return tenthSecondDelay;
@@ -165,6 +170,7 @@ public class CarSelection : MonoBehaviour
     private void LockCar()
     {
         Menu.ins.playButtonCar.interactable = false;
+        SetPreviousButton();
         Menu.ins.carLockText.text = Menu.ins.carLockTexts[Menu.ins.selectedCar];
         carLockObject.SetActive(true);
         carLockObject.LeanScale(new Vector3(1f, 1f, 1f), 0.25f).setEaseInOutQuart().setIgnoreTimeScale(true); ;
@@ -182,4 +188,12 @@ public class CarSelection : MonoBehaviour
     public void NextCarWrapper() { if (!Menu.ins.animating) { StartCoroutine(NextCar()); } }
     public void PreviousCarWrapper() { if (!Menu.ins.animating) { StartCoroutine(PreviousCar()); } }
 
+    public void SetPreviousButton()
+    {
+        //Clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+
+        //set a new selected object
+        EventSystem.current.SetSelectedGameObject(previusButton);
+    }
 }

@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CarSelectionB : MonoBehaviour
 {
-
+    [SerializeField] GameObject previusButton;
     private GameObject carLockObjectB;
     private Image carLockImageB;
     private WaitForSecondsRealtime tenthSecondDelay, quarterSecondDelay, twoFifthsSecondDelay;
@@ -40,7 +41,7 @@ public class CarSelectionB : MonoBehaviour
         if (Menu.ins.totalNumCars > 1)
         { Menu.ins.nextCarButtonB.interactable = true; }
         else
-        { Menu.ins.nextCarButtonB.interactable = false; }
+        { Menu.ins.nextCarButtonB.interactable = false; SetPreviousButton(); }
         CheckCarLockB();
         Menu.ins.carsInstantiatedB = true;
     }
@@ -54,7 +55,7 @@ public class CarSelectionB : MonoBehaviour
         Menu.ins.carsB[Menu.ins.selectedCarB].LeanMoveZ(Menu.ins.currentCarPosition, Menu.ins.halfSecond).setEaseInOutQuart().setIgnoreTimeScale(true);
         Menu.ins.previousCarButtonB.interactable = true;
         if (Menu.ins.selectedCarB == Menu.ins.totalNumCars - 1)
-        { Menu.ins.nextCarButtonB.interactable = false; }
+        { Menu.ins.nextCarButtonB.interactable = false; SetPreviousButton(); }
         CheckCarLockB();
         Menu.ins.carNameB.gameObject.LeanScaleX(0f, 0.1f).setEaseInOutQuart().setIgnoreTimeScale(true);;
         yield return tenthSecondDelay;
@@ -73,7 +74,7 @@ public class CarSelectionB : MonoBehaviour
         Menu.ins.carsB[Menu.ins.selectedCarB].LeanMoveZ(Menu.ins.currentCarPosition, Menu.ins.halfSecond).setEaseInOutQuart().setIgnoreTimeScale(true);
         Menu.ins.nextCarButtonB.interactable = true;
         if (Menu.ins.selectedCarB == 0)
-        { Menu.ins.previousCarButtonB.interactable = false; }
+        { Menu.ins.previousCarButtonB.interactable = false; SetPreviousButton(); }
         CheckCarLockB();
         Menu.ins.carNameB.gameObject.LeanScaleX(0f, 0.1f).setEaseInOutQuart().setIgnoreTimeScale(true);;
         yield return tenthSecondDelay;
@@ -92,6 +93,7 @@ public class CarSelectionB : MonoBehaviour
     private void LockCarB()
     {
         Menu.ins.playButtonCarB.interactable = false;
+        SetPreviousButton();
         carLockObjectB.SetActive(true);
         carLockObjectB.LeanScale(new Vector3(1f, 1f, 1f), 0.25f).setEaseInOutQuart().setIgnoreTimeScale(true);;
     }
@@ -107,4 +109,12 @@ public class CarSelectionB : MonoBehaviour
     public void NextCarWrapperB() { if (!Menu.ins.animating) { StartCoroutine(NextCarB()); } }
     public void PreviousCarWrapperB() { if (!Menu.ins.animating) { StartCoroutine(PreviousCarB()); } }
 
+    public void SetPreviousButton()
+    {
+        //Clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+
+        //set a new selected object
+        EventSystem.current.SetSelectedGameObject(previusButton);
+    }
 }

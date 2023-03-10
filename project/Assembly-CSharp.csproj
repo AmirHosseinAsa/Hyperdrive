@@ -80,11 +80,14 @@
     <Compile Include="Assets\Scripts\LevelSelection.cs" />
     <Compile Include="Assets\Scripts\CarSelectionB.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
+    <Compile Include="Assets\Scripts\MultiplayerCarSelection.cs" />
+    <Compile Include="Assets\Scripts\DefaultSelectedButton.cs" />
     <Compile Include="Assets\Scripts\CarSelection.cs" />
     <Compile Include="Assets\Scripts\TrackWaypoints.cs" />
     <Compile Include="Assets\Scripts\MenuWindows.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTDescrOptional.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Quick_Race_Settings_Selection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

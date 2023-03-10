@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class DefaultSelectedButton : MonoBehaviour
 {
     [SerializeField] GameObject DefaultButton;
+    [SerializeField] GameObject SecondaryButton;
     bool changed = false;
 
     private void Update()
@@ -11,16 +12,24 @@ public class DefaultSelectedButton : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        if ((EventSystem.current.currentSelectedGameObject != DefaultButton && !changed)||Input.GetKeyDown(KeyCode.Mouse0))
+        if ((EventSystem.current.currentSelectedGameObject != DefaultButton && !changed) || Input.GetKeyDown(KeyCode.Mouse0))
         {
-            //Clear selected object
-            EventSystem.current.SetSelectedGameObject(null);
-
-            //set a new selected object
-            EventSystem.current.SetSelectedGameObject(DefaultButton);
-
+            SelectDefaultButton();
             changed = true;
         }
+    }
+
+    public void SelectDefaultButton()
+    {
+        //Clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+
+
+        //set a new selected object
+        if (DefaultButton.activeSelf)
+            EventSystem.current.SetSelectedGameObject(DefaultButton);
+        else
+            EventSystem.current.SetSelectedGameObject(SecondaryButton);
     }
 
     private void OnDisable()

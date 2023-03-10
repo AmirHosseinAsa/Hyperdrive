@@ -154,6 +154,9 @@ public class Menu : MonoBehaviour
                 case 10: mapName = MapNames.Moon; raceMode = RaceModes.Escape; break;
                 case 11: mapName = MapNames.Desert; raceMode = RaceModes.Classic; break;
                 case 12: mapName = MapNames.Urban; raceMode = RaceModes.Survival; break;
+                case 13: mapName = MapNames.Rural; raceMode = RaceModes.Special; break;
+                case 14: mapName = MapNames.Artic; raceMode = RaceModes.Classic; break;
+                case 15: mapName = MapNames.Moon; raceMode = RaceModes.Infection; break;
                 default: mapName = MapNames.Rural; raceMode = RaceModes.Classic; break;
             }
         }
@@ -173,6 +176,9 @@ public class Menu : MonoBehaviour
                     case 10: difficultyType = DifficultyTypes.Hard; numLaps = 4; numCars = 5; break;
                     case 11: difficultyType = DifficultyTypes.Hard; numLaps = 4; numCars = 2; break;
                     case 12: difficultyType = DifficultyTypes.Hard; numLaps = 4; numCars = 5; break;
+                    case 13: difficultyType = DifficultyTypes.Hard; numLaps = 4; numCars = 4; break;
+                    case 14: difficultyType = DifficultyTypes.Hard; numLaps = 6; numCars = 5; break;
+                    case 15: difficultyType = DifficultyTypes.Hard; numLaps = 4; numCars = 3; break;
                 }
                 break;
             default:

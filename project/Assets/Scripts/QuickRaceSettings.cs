@@ -14,13 +14,16 @@ public class QuickRaceSettings : MonoBehaviour
             Menu.ins.raceSettings1Car.interactable = false;
             Menu.ins.backButtonSettingsQuickRace2P.gameObject.SetActive(true);
             Menu.ins.backButtonSettingsQuickRace1P.gameObject.SetActive(false);
+            Quick_Race_Settings_Selection.isMultiplayer = true;
         }
         else
         {
             Menu.ins.raceSettings1Car.interactable = true;
             Menu.ins.backButtonSettingsQuickRace2P.gameObject.SetActive(false);
             Menu.ins.backButtonSettingsQuickRace1P.gameObject.SetActive(true);
+            Quick_Race_Settings_Selection.isMultiplayer = false;
         }
+   
         Menu.ins.FadeIn(Menu.ins.raceSettingsCanvas);
         Menu.ins.carsParent.SetActive(false);
         if (Menu.ins.menuScreen == Menu.MenuScreens.levels)

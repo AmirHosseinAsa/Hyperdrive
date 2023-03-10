@@ -11,7 +11,7 @@ public class UIController : MonoBehaviour
     public AudioClip countdownSound, goSound, finishSound, timerSound, multipleRevSound, singleRevSound, eliminateSound, infectSound, disinfectSound;
     public bool cameraSwirl, cameraSwirlB, raceOver, raceOverB, racePaused, raceStarted, showingInfo;
     public Camera mainCamera, mainCameraB;
-    public CanvasGroup buttonsCanvas, buttonsCanvas2P, countdownCanvas, infoCanvas, loadingCanvas, columnCanvas, overCanvas, overCanvasA, overCanvasB, pauseCanvas, raceCanvas, raceCanvasA, raceCanvasB, resultsCanvas, resultsCanvasA, resultsCanvasB, leaderboardCanvasA, leaderboardCanvasB, timerCanvas, quitCanvas, restartCanvas;
+    public CanvasGroup countdownCanvas, infoCanvas, loadingCanvas, columnCanvas, overCanvas, overCanvasA, overCanvasB, pauseCanvas, raceCanvas, raceCanvasA, raceCanvasB, resultsCanvas, resultsCanvasA, resultsCanvasB, leaderboardCanvasA, leaderboardCanvasB, timerCanvas, quitCanvas, restartCanvas;
     public GameObject unlockText;
     public GameObject[] resultsStars;
     public int numCars;
@@ -45,8 +45,6 @@ public class UIController : MonoBehaviour
     {
         animating = true;
         loadingCanvas.gameObject.SetActive(true);
-        buttonsCanvas.gameObject.SetActive(false);
-        buttonsCanvas2P.gameObject.SetActive(false);
         countdownCanvas.gameObject.SetActive(false);
         overCanvas.gameObject.SetActive(false);
         pauseCanvas.gameObject.SetActive(false);
@@ -260,12 +258,10 @@ public class UIController : MonoBehaviour
         {
             raceCanvasA.LeanAlpha(1f, halfSecond).setEaseInOutQuart().setIgnoreTimeScale(true);
             raceCanvasB.LeanAlpha(1f, halfSecond).setEaseInOutQuart().setIgnoreTimeScale(true);
-            FadeIn(buttonsCanvas2P);
         }
         else
         {
             raceCanvas.LeanAlpha(1f, halfSecond).setEaseInOutQuart().setIgnoreTimeScale(true);
-            FadeIn(buttonsCanvas);
         }
         if ((raceMode == Menu.RaceModes.Escape) || (raceMode == Menu.RaceModes.Survival) || (raceMode == Menu.RaceModes.Infection) || (raceMode == Menu.RaceModes.Special))
         { timerCanvas.LeanAlpha(1f, halfSecond).setEaseInOutQuart().setIgnoreTimeScale(true); }
@@ -304,16 +300,12 @@ public class UIController : MonoBehaviour
         IncreaseDepthOfField();
         StartCoroutine(StartCountdownTimer());
         StartCoroutine(FadeOut(pauseCanvas));
-        StartCoroutine(FadeOut(buttonsCanvas));
-        StartCoroutine(FadeOut(buttonsCanvas2P));
     }
 
     public void PauseRace()
     {
         DecreaseDepthOfField();
         FadeIn(pauseCanvas);
-        StartCoroutine(FadeOut(buttonsCanvas));
-        StartCoroutine(FadeOut(buttonsCanvas2P));
         if (raceOver)
         { StartCoroutine(FadeOut(overCanvasA)); StartCoroutine(FadeOut(resultsCanvasA)); }
         else if (raceOverB)
@@ -377,7 +369,6 @@ public class UIController : MonoBehaviour
         FadeIn(overCanvas);
         StartCoroutine(FadeOut(countdownCanvas));
         StartCoroutine(FadeOut(raceCanvas));
-        StartCoroutine(FadeOut(buttonsCanvas));
         StartCoroutine(FadeOut(timerCanvas));
         StartCoroutine(FadeOut(infoCanvas));
         StartCoroutine(ShowRaceResults());
@@ -396,7 +387,6 @@ public class UIController : MonoBehaviour
         bool showLeaderboard = raceOverB;
         if (showLeaderboard)
         {
-            StartCoroutine(FadeOut(buttonsCanvas2P));
             StartCoroutine(FadeOut(timerCanvas));
             StartCoroutine(FadeOut(infoCanvas));
         }
@@ -431,7 +421,6 @@ public class UIController : MonoBehaviour
         bool showLeaderboard = raceOver;
         if (showLeaderboard)
         {
-            StartCoroutine(FadeOut(buttonsCanvas2P));
             StartCoroutine(FadeOut(timerCanvas));
             StartCoroutine(FadeOut(infoCanvas));
         }
@@ -541,14 +530,12 @@ public class UIController : MonoBehaviour
                     resultsText[20].text = "NEW LEVELS UNLOCKED";
                     resultsText[21].text = "LEVEL 8,9";
                     break;
-
                 case 9:
                     if (PlayerPrefs.GetInt("Level10", 0) == 1) { break; }
                     PlayerPrefs.SetInt("Level10", 1);
                     resultsText[20].text = "NEW LEVEL UNLOCKED";
                     resultsText[21].text = "LEVEL 10";
                     break;
-
                 case 10:
                     if (PlayerPrefs.GetInt("Level11", 0) == 1) { break; }
                     PlayerPrefs.SetInt("Level11", 1);
@@ -556,14 +543,34 @@ public class UIController : MonoBehaviour
                     resultsText[20].text = "NEW LEVELS UNLOCKED";
                     resultsText[21].text = "LEVEL 11,12";
                     break;
-
                 case 11:
                     if (PlayerPrefs.GetInt("Car4", 0) == 1) { break; }
                     PlayerPrefs.SetInt("Car4", 1);
                     resultsText[20].text = "NEW CAR UNLOCKED";
                     resultsText[21].text = GameManager.instance.cars[4].name;
                     break;
-
+                case 12:
+                    if (PlayerPrefs.GetInt("Level13", 0) == 1) { break; }
+                    PlayerPrefs.SetInt("Level13", 1);
+                    resultsText[20].text = "NEW LEVEL UNLOCKED";
+                    resultsText[21].text = "LEVEL 13";
+                    break;
+                case 13:
+                    if (PlayerPrefs.GetInt("Level14", 0) == 1) { break; }
+                    PlayerPrefs.SetInt("Level14", 1);
+                    resultsText[20].text = "NEW LEVEL UNLOCKED";
+                    resultsText[21].text = "LEVEL 14";
+                    break;
+                case 14:
+                    if (PlayerPrefs.GetInt("Level15", 0) == 1) { break; }
+                    PlayerPrefs.SetInt("Level15", 1);
+                    resultsText[20].text = "NEW LEVEL UNLOCKED";
+                    resultsText[21].text = "LEVEL 15";
+                    break;
+                case 15:
+                    resultsText[20].text = "CONGRATULATION";
+                    resultsText[21].text = "YOU ARE THE BEST DRIVER";
+                    break;
                 default:
                     resultsText[20].text = string.Empty;
                     break;
