@@ -568,6 +568,31 @@ public class UIController : MonoBehaviour
                     resultsText[21].text = "LEVEL 15";
                     break;
                 case 15:
+                    if (PlayerPrefs.GetInt("Level16", 0) == 1) { break; }
+                    PlayerPrefs.SetInt("Level16", 1);
+                    PlayerPrefs.SetInt("Level17", 1);
+                    resultsText[20].text = "NEW LEVELS UNLOCKED";
+                    resultsText[21].text = "LEVEL 16,17";
+                    break;
+                case 17:
+                    if (PlayerPrefs.GetInt("Level18", 0) == 1) { break; }
+                    PlayerPrefs.SetInt("Level18", 1);
+                    resultsText[20].text = "NEW LEVEL UNLOCKED";
+                    resultsText[21].text = "LEVEL 18";
+                    break;
+                case 18:
+                    if (PlayerPrefs.GetInt("Level19", 0) == 1) { break; }
+                    PlayerPrefs.SetInt("Level19", 1);
+                    resultsText[20].text = "NEW LEVEL UNLOCKED";
+                    resultsText[21].text = "LEVEL 19";
+                    break;
+                case 19:
+                    if (PlayerPrefs.GetInt("Level20", 0) == 1) { break; }
+                    PlayerPrefs.SetInt("Level20", 1);
+                    resultsText[20].text = "NEW LEVEL UNLOCKED";
+                    resultsText[21].text = "LEVEL 20";
+                    break;
+                case 20:
                     resultsText[20].text = "CONGRATULATION";
                     resultsText[21].text = "YOU ARE THE BEST DRIVER";
                     break;

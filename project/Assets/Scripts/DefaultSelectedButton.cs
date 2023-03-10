@@ -36,4 +36,10 @@ public class DefaultSelectedButton : MonoBehaviour
     {
         changed = false;
     }
+
+    private void OnEnable()
+    {
+        SelectDefaultButton();
+        changed = false;
+    }
 }

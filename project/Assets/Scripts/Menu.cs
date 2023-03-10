@@ -157,6 +157,11 @@ public class Menu : MonoBehaviour
                 case 13: mapName = MapNames.Rural; raceMode = RaceModes.Special; break;
                 case 14: mapName = MapNames.Artic; raceMode = RaceModes.Classic; break;
                 case 15: mapName = MapNames.Moon; raceMode = RaceModes.Infection; break;
+                case 16: mapName = MapNames.Desert; raceMode = RaceModes.Escape; break;
+                case 17: mapName = MapNames.Urban; raceMode = RaceModes.Survival; break;
+                case 18: mapName = MapNames.Artic; raceMode = RaceModes.Special; break;
+                case 19: mapName = MapNames.Rural; raceMode = RaceModes.Infection; break;
+                case 20: mapName = MapNames.Moon; raceMode = RaceModes.Classic; break;
                 default: mapName = MapNames.Rural; raceMode = RaceModes.Classic; break;
             }
         }
@@ -172,13 +177,18 @@ public class Menu : MonoBehaviour
                     case 6: difficultyType = DifficultyTypes.Hard; numLaps = 3; numCars = 4; break;
                     case 7: difficultyType = DifficultyTypes.Hard; numLaps = 5; numCars = 5; break;
                     case 8: difficultyType = DifficultyTypes.Hard; numLaps = 5; numCars = 5; break;
-                    case 9: difficultyType = DifficultyTypes.Hard; numLaps = 3; numCars = 4; break;
-                    case 10: difficultyType = DifficultyTypes.Hard; numLaps = 4; numCars = 5; break;
+                    case 9: difficultyType = DifficultyTypes.Hard; numLaps = 4; numCars = 4; break;
+                    case 10: difficultyType = DifficultyTypes.Hard; numLaps = 5; numCars = 5; break;
                     case 11: difficultyType = DifficultyTypes.Hard; numLaps = 4; numCars = 2; break;
                     case 12: difficultyType = DifficultyTypes.Hard; numLaps = 4; numCars = 5; break;
                     case 13: difficultyType = DifficultyTypes.Hard; numLaps = 4; numCars = 4; break;
-                    case 14: difficultyType = DifficultyTypes.Hard; numLaps = 6; numCars = 5; break;
-                    case 15: difficultyType = DifficultyTypes.Hard; numLaps = 4; numCars = 3; break;
+                    case 14: difficultyType = DifficultyTypes.Hard; numLaps = 7; numCars = 5; break;
+                    case 15: difficultyType = DifficultyTypes.Hard; numLaps = 6; numCars = 5; break;
+                    case 16: difficultyType = DifficultyTypes.Hard; numLaps = 6; numCars = 5; break;
+                    case 17: difficultyType = DifficultyTypes.Hard; numLaps = 5; numCars = 4; break;
+                    case 18: difficultyType = DifficultyTypes.Hard; numLaps = 6; numCars = 5; break;
+                    case 19: difficultyType = DifficultyTypes.Hard; numLaps = 5; numCars = 5; break;
+                    case 20: difficultyType = DifficultyTypes.Hard; numLaps = 8; numCars = 5; break;
                 }
                 break;
             default:
