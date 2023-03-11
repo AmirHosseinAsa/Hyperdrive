@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CarSelection : MonoBehaviour
 {
-    [SerializeField] GameObject previusButton;
+    [SerializeField] GameObject previusCarButton,nextCarButton;
     private GameObject carLockObject;
     private Image carLockImage;
     private WaitForSecondsRealtime tenthSecondDelay, quarterSecondDelay, twoFifthsSecondDelay;
@@ -143,7 +143,7 @@ public class CarSelection : MonoBehaviour
         Menu.ins.cars[Menu.ins.selectedCar].LeanMoveZ(Menu.ins.currentCarPosition, Menu.ins.halfSecond).setEaseInOutQuart().setIgnoreTimeScale(true);
         Menu.ins.nextCarButton.interactable = true;
         if (Menu.ins.selectedCar == 0)
-        { Menu.ins.previousCarButton.interactable = false; SetPreviousButton(); }
+        { Menu.ins.previousCarButton.interactable = false; SetNextCarButton(); }
         CheckCarLock();
         Menu.ins.carName.gameObject.LeanScaleX(0f, 0.1f).setEaseInOutQuart().setIgnoreTimeScale(true); ;
         yield return tenthSecondDelay;
@@ -170,7 +170,7 @@ public class CarSelection : MonoBehaviour
     private void LockCar()
     {
         Menu.ins.playButtonCar.interactable = false;
-        SetPreviousButton();
+        //SetPreviousButton();
         Menu.ins.carLockText.text = Menu.ins.carLockTexts[Menu.ins.selectedCar];
         carLockObject.SetActive(true);
         carLockObject.LeanScale(new Vector3(1f, 1f, 1f), 0.25f).setEaseInOutQuart().setIgnoreTimeScale(true); ;
@@ -194,6 +194,15 @@ public class CarSelection : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
 
         //set a new selected object
-        EventSystem.current.SetSelectedGameObject(previusButton);
+        EventSystem.current.SetSelectedGameObject(previusCarButton);
+    }
+
+    public void SetNextCarButton()
+    {
+        //Clear selected object
+        EventSystem.current.SetSelectedGameObject(null);
+
+        //set a new selected object
+        EventSystem.current.SetSelectedGameObject(nextCarButton);
     }
 }

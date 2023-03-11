@@ -968,8 +968,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1496.8556, y: -60}
-  m_SizeDelta: {x: 531.2371, y: 120}
+  m_AnchoredPosition: {x: 1495, y: -60}
+  m_SizeDelta: {x: 530, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58119337
 MonoBehaviour:
@@ -5892,10 +5892,10 @@ RectTransform:
   m_Father: {fileID: 899909213}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -40}
-  m_SizeDelta: {x: 633.3333, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339554057
 MonoBehaviour:
@@ -18017,7 +18017,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be2c35f6f834c645baf82f9c4442b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previusButton: {fileID: 1963312308}
+  previusCarButton: {fileID: 1963312308}
+  nextCarButton: {fileID: 1215327929}
 --- !u!1 &1112409563
 GameObject:
   m_ObjectHideFlags: 0
@@ -20143,7 +20144,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.1835e-41, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 2.20405e-39, y: -9.1835e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -20244,8 +20245,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1829.3556, y: -440}
-  m_SizeDelta: {x: 186.23712, y: 880}
+  m_AnchoredPosition: {x: 1827.5, y: -440}
+  m_SizeDelta: {x: 185, y: 880}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215327931
 MonoBehaviour:
@@ -21833,8 +21834,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 265.61856, y: -60}
-  m_SizeDelta: {x: 531.2371, y: 120}
+  m_AnchoredPosition: {x: 265, y: -60}
+  m_SizeDelta: {x: 530, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321328127
 MonoBehaviour:
@@ -22711,10 +22712,10 @@ RectTransform:
   m_Father: {fileID: 899909213}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1598.3333, y: -40}
-  m_SizeDelta: {x: 633.3333, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373445850
 MonoBehaviour:
@@ -28385,7 +28386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad47ec2be6f87543ad5124b22e6dc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previusButton: {fileID: 1596291169}
+  previusCarButton: {fileID: 1596291169}
+  nextCarButton: {fileID: 422036620}
 --- !u!1 &1728107412
 GameObject:
   m_ObjectHideFlags: 0
@@ -31853,10 +31855,10 @@ RectTransform:
   m_Father: {fileID: 1956774307}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: 0}
-  m_SizeDelta: {x: 400, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1918137329
 GameObject:
@@ -32675,10 +32677,10 @@ RectTransform:
   m_Father: {fileID: 899909213}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 321.66666, y: -40}
-  m_SizeDelta: {x: 633.3333, y: 70}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1955597016
 MonoBehaviour:
@@ -32887,8 +32889,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 93.11856, y: -440}
-  m_SizeDelta: {x: 186.23712, y: 880}
+  m_AnchoredPosition: {x: 92.5, y: -440}
+  m_SizeDelta: {x: 185, y: 880}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1963312310
 MonoBehaviour:
@@ -33428,7 +33430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!225 &1990841800
 CanvasGroup:
   m_ObjectHideFlags: 0
