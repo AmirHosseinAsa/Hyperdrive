@@ -9,7 +9,6 @@ The player races against AI-controlled cars in a 3D environment, with the object
 
 ## Features
 - AI-controlled opponents
-- 5 levels with increasing difficulty
 - 5 maps (Rural, Arctic, Desert, Urban, Moon)
 - 5 race modes (Classic, Escape, Survival, Infection, Special)
 - Unlockable cars and levels
