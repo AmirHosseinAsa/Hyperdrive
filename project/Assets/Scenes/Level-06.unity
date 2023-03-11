@@ -15553,12 +15553,6 @@ Light:
     type: 3}
   m_PrefabInstance: {fileID: 6356041950549446737}
   m_PrefabAsset: {fileID: 0}
---- !u!225 &705598245 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 3900483692129296718, guid: d6ef186c70d25d24587369c7399838f1,
-    type: 3}
-  m_PrefabInstance: {fileID: 3900483692566196843}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &712913671
 GameObject:
   m_ObjectHideFlags: 0
@@ -44128,8 +44122,8 @@ MonoBehaviour:
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
-  m_InputActionsPerSecond: 1
-  m_RepeatDelay: 1
+  m_InputActionsPerSecond: 15
+  m_RepeatDelay: 0.5
   m_ForceModuleActive: 1
 --- !u!114 &1959851396
 MonoBehaviour:
@@ -44145,7 +44139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 10
+  m_DragThreshold: 5
 --- !u!4 &1959851397
 Transform:
   m_ObjectHideFlags: 0
@@ -48976,12 +48970,6 @@ CanvasGroup:
     type: 3}
   m_PrefabInstance: {fileID: 3900483692566196843}
   m_PrefabAsset: {fileID: 0}
---- !u!225 &3900483692566196850 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 9156598484621163442, guid: d6ef186c70d25d24587369c7399838f1,
-    type: 3}
-  m_PrefabInstance: {fileID: 3900483692566196843}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3900483692566196851 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7777059219903675009, guid: d6ef186c70d25d24587369c7399838f1,
@@ -49786,7 +49774,7 @@ PrefabInstance:
         type: 3}
       propertyPath: buttonsCanvas
       value: 
-      objectReference: {fileID: 705598245}
+      objectReference: {fileID: 0}
     - target: {fileID: 5211007911475797203, guid: a17170269fcd4c04eb2cf452becd55c8,
         type: 3}
       propertyPath: countdownText
@@ -49826,7 +49814,7 @@ PrefabInstance:
         type: 3}
       propertyPath: buttonsCanvas2P
       value: 
-      objectReference: {fileID: 3900483692566196850}
+      objectReference: {fileID: 0}
     - target: {fileID: 5211007911475797203, guid: a17170269fcd4c04eb2cf452becd55c8,
         type: 3}
       propertyPath: countdownCanvas
