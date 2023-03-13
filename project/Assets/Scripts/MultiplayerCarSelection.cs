@@ -9,7 +9,7 @@ public class MultiplayerCarSelection : MonoBehaviour
     private bool oldValue = false;
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (isMultiplayer != oldValue)
         {

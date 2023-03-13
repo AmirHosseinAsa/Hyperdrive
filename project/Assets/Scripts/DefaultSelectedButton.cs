@@ -7,7 +7,7 @@ public class DefaultSelectedButton : MonoBehaviour
     [SerializeField] GameObject SecondaryButton;
     bool changed = false;
 
-    private void Update()
+    private void LateUpdate()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

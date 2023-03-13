@@ -49,8 +49,11 @@ public class Menu : MonoBehaviour
     public Vector3 cameraPosition, cameraRotation;
     public WaitForSecondsRealtime halfSecondDelay;
 
+    private int runThisScene = 0;
+
     private void Awake()
     {
+        QualitySettings.vSyncCount = 1;
         ins = this;
         Time.timeScale = 1f;
         levelSelection = GetComponentInChildren<LevelSelection>();
@@ -131,7 +134,34 @@ public class Menu : MonoBehaviour
         menuSong = music.audioSource.clip;
         music.audioSource.Stop();
         yield return new WaitForSecondsRealtime(2f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + selectedLevel);
+
+        if (selectedLevel > 5)
+        {
+            switch (selectedLevel)
+            {
+                case 6 or 19 or 13:
+                    runThisScene = 1;
+                    break;
+                case 7 or 11 or 16:
+                    runThisScene = 3;
+                    break;
+                case 8 or 12 or 17:
+                    runThisScene = 4;
+                    break;
+                case 9 or 14 or 18:
+                    runThisScene = 2;
+                    break;
+                case 10 or 15 or 20:
+                    runThisScene = 5;
+                    break;
+                default:
+                    runThisScene = selectedLevel;
+                    break;
+            }
+        }
+        else
+            runThisScene = selectedLevel;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + runThisScene);
         animating = false;
     }
 

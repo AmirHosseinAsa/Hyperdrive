@@ -808,7 +808,6 @@ GameObject:
   - component: {fileID: 6296474596507584483}
   - component: {fileID: 8617325779885304065}
   - component: {fileID: 1739709745919618190}
-  - component: {fileID: 957039998124424186}
   - component: {fileID: 6735421304120627453}
   - component: {fileID: 3279682057425133646}
   m_Layer: 5
@@ -851,7 +850,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 1
+  m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -883,23 +882,6 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &957039998124424186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4891995329594659598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!225 &6735421304120627453
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -925,6 +907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaultButton: {fileID: 7891249052389392511}
+  SecondaryButton: {fileID: 0}
 --- !u!1 &6033543673680969674
 GameObject:
   m_ObjectHideFlags: 0
