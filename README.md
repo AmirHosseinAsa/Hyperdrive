@@ -19,3 +19,9 @@ The player races against AI-controlled cars in a 3D environment, with the object
 ## Languages and Tools
 - C# 10.0
 - Unity 2021.3
+
+
+## Credits
+- Abhijeet Pitumbur
+- Oudish Thacooree
+- Viman Singh Sreepaul
